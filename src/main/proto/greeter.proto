@@ -1,0 +1,13 @@
+syntax = 'proto3';
+
+option java_package = 'com.apigw.server';
+
+service Greeter{
+  rpc greeting (HalloRequest) returns ( HalloReply) {}
+}
+message HalloRequest{
+  string name = 1;
+}
+message HalloReply{
+  string message = 1;
+}
